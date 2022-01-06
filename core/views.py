@@ -2,30 +2,37 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 
-# Inicio home/
-#
-# Historia about/
-#
-# Servicios services/
-#
-# Visítanos store/
-#
-# Contacto contact/
-#
-# Blog blog/
-
-# Sample sample/ (esta es para páginas de prueba)
+# Cambia por render
+# Create your views here.
+# def home(request):
+#     return HttpResponse('<h1>Home</h1>')
+# def about(request):
+#    return HttpResponse('<h1>Historia</h1>')
 
 # Create your views here.
-def Home(request):
-    return HttpResponse('<h1>Home</h1>')
+def home(request):
+    return render(request, 'core/home.html')
 
 
-def About(request):
-    return HttpResponse('<h1>About</h1>')
+def about(request):
+    return render(request, 'core/about.html')
 
-def Services(request):
-    return HttpResponse('<h1>Services</h1>')
 
-def Sample(request):
-    return HttpResponse('<h1>Sample</h1>')
+def services(request):
+    return render(request, 'core/services.html')
+
+
+def store(request):
+    return render(request, 'core/store.html')
+
+
+def contact(request):
+    return render(request, 'core/contact.html')
+
+
+def blog(request):
+    return render(request, 'core/blog.html')
+
+
+def sample(request):
+    return render(request, 'core/sample.html')
